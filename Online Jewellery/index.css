@@ -1,0 +1,321 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #000000, #000000);
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Header */
+/* Navbar Styles */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 120px; /* Reduced navbar height */
+    background-color: #010107; /* Or any color you'd prefer */
+    color: rgb(254, 253, 253);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000;
+    transition: top 0.3s ease-in-out;
+}
+nav {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    flex-grow: 1; /* Allow nav to take remaining space */
+    margin-right: 50px; /* Move nav slightly to the left */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px; /* Smaller font size */
+    padding: 5px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Increase Header (Hero Section) Size with Background Image */
+.hero {
+    height: 90vh; /* Large hero section */
+    background: url('index2.pmg.jpg') no-repeat center center/cover; /* Custom background image */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: rgb(0, 0, 0); /* Text color set to white for contrast */
+    position: relative;
+}
+
+.hero h2 {
+    font-size: 48px; /* Larger heading size */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow for better readability */
+}
+
+.hero .cta-btn {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 18px; /* Larger button size */
+    background-color: rgba(0, 0, 4, 0.8); /* Semi-transparent background */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.hero .cta-btn:hover {
+    background-color: rgba(54, 55, 55, 0.8); /* Darken on hover */
+}
+
+
+/* Product Catalog */
+.catalog {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 20px;
+    flex-wrap: wrap;
+}
+
+.product {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 280px;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product h3 {
+    color: #080808;
+    text-align: center;
+    padding: 15px;
+}
+
+.product p {
+    padding: 0 15px;
+    text-align: center;
+    color: #555;
+}
+
+.product button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #060606;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.product button:hover {
+    background-color: #050506;
+    transform: scale(1.05);
+}
+
+.product:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer */
+footer {
+    
+    bottom: -20px; /* Initially hidden (adjust according to footer height) */
+    z-index: 1000;
+    position: relative;
+    width: 100%;
+    background-color: #08080a; /* or any color you prefer */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    visibility: hidden; /* Initially hidden */
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.6);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Login Popup */
+#login-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.912); /* Dark transparent background */
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgb(255, 255, 255);
+    z-index: 1000;
+}
+
+.login-content {
+
+    background: #000000;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(248, 247, 247, 0.79);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+#login-popup img {
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 100px; /* Adjust the size of the image */
+}
+
+.login-content h2 {
+    margin-bottom: 1.5rem;
+    font-size: 24px;
+    color: #ffffff;
+    font-weight:bold;
+}
+
+.login-content label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    text-align: left;
+}
+
+.login-content input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.login-content input:focus {
+    border-color: #333;
+    outline: none;
+}
+
+#login-popup button {
+    width: 100%; /* Keep this for the login button */
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#login-error {
+    color: red;
+    font-size: 14px;
+    margin-top: 1rem;
+    display: none;
+}
+
+/* Close Button (X) */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+button {
+    width: auto; /* or remove this property */
+    padding: 10px;
+    /* Global button styles that won't affect the login button */
+}
+/* Container for the sorting dropdown */
+.sort-container {
+    display: flex;
+    justify-content: flex-end; /* Aligns dropdown to the right */
+    margin: 50px 150px; /* Increased top margin to bring it down */
+    margin-bottom: 20px;
+}
+
+/* Styling for the dropdown */
+.sort-container select {
+    padding: 10px 15px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif; /* Clean font */
+    background-color: #f9f9f9; /* Light background for modern feel */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 5px; /* Rounded edges for a sleek look */
+    outline: none; /* Remove the default outline */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Dropdown hover effect */
+.sort-container select:hover {
+    background-color: #fff; /* White background on hover */
+    border-color: #aaa; /* Darken border on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+/* Dropdown arrow styling */
+.sort-container select::-ms-expand {
+    display: none; /* Remove default arrow in IE */
+}
+
+.sort-container select:focus {
+    border-color: #333; /* Darker border on focus */
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1); /* Outline effect on focus */
+}
+
+/* Add some spacing between dropdown and products */
+.catalog {
+    margin-top: 2;
+}

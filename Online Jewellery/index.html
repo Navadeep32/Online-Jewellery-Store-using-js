@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Online Jewellery Store</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="diva logo.png" alt="UMESH JEWELS" style="height: 100px; width: 345px;">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home1.html">Home</a></li>
+                <li><a href="#"></a></li>
+                <li><a href="fav.html">Wishlist</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="#" id="account-btn">Account</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Discover the Beauty of Elegance</h2>
+        <button class="cta-btn">SWIPE DOWN ↓</button>
+    </section>
+    
+    <!-- Sorting Dropdown -->
+    <div class="sort-container" id="sorte">
+        <label for="sort">Filter :</label>
+        <select id="sort" onchange="sortProducts()">
+            <option value="default">Default</option>
+            <option value="priceLowHigh">Price: Low to High</option>
+            <option value="priceHighLow">Price: High to Low</option>
+            <option value="newest">Newest</option>
+        </select>
+    </div>
+    
+    <section class="catalog" id="products">
+        <!-- Product items go here -->
+    
+    
+    <section class="catalog">
+        <div class="product" data-price="2000" data-newest="12">
+            <a href="ring.html">
+            <img src="gold ring.jpg" alt="Ring">
+        </a>
+            <h3>Diamond Ring</h3>
+            <p>₹2000</p>
+            
+            <button class="add-to-cart"
+            data-name="Diamond Ring"
+        data-price="2000"
+        data-description="Elegant Diamond Ring"
+        data-image="gold ring.jpg">Add to Cart</button>
+        </div>
+        <div class="product" data-price="1500" data-newest="11">
+            <a href="necklace.html">
+            <img src="pearl necklace.jpg" alt="Necklace">
+            </a>
+            <h3>Pearl Necklace</h3>
+            <p>₹1500</p>
+             
+            <button class="add-to-cart"
+            data-name="pearl necklace"
+        data-price="1500"
+        data-description="Natural pearl Necklace"
+        data-image="pearl necklace.jpg">Add to Cart</button>
+        </div>
+        <div class="product" data-price="1850" data-newest="10">
+            <a href="bracelet.html">
+            <img src="gold bracelet.jpg" alt="Bracelet">
+            </a>
+            <h3>Gold Bracelet</h3>
+            <p>₹1850</p>
+            
+            <button class="add-to-cart"
+            data-name="Gold Bracelet"
+        data-price="1850"
+        data-description="Glancing Gold bracelet"
+        data-image="pearl necklace.jpg">Add to Cart</button>
+        </div>
+        <div class="product" data-price="850" data-newest="9">
+            <img src="mangalsutra.jpg" alt="Mangalsutra">
+            <h3>Mangalsutra</h3>
+            <p>₹850</p>
+            <button class="add-to-cart"
+            data-name="Mangalsutra"
+            data-price="850"
+            data-description="Radiant Marriage Mangalsutra"
+            data-image="mangalsutra.jpg">Add to Cart</button>
+        </div>
+        <div class="product" data-price="1200" data-newest="8">
+            <img src="silver bowl set.jpg" alt="Silver Bowl Set">
+            <h3>Silver Bowl Set</h3>
+            <p>₹1200</p>
+            <button class="add-to-cart"
+            data-name="Silver Bowl Set"
+            data-price="1200"
+            data-description="Classic silver bowl set"
+            data-image="silver bowl set.jpg">Add to Cart</button>
+        </div>
+        <div class="product" data-price="750" data-newest="7">
+            <img src="golden starry bangle.jpg" alt="Gold Starry Bangle">
+            <h3>Gold Starry Bangle</h3>
+            <p>₹750</p>
+            <button class="add-to-cart"
+            data-name="Golden Starry Bangle"
+            data-price="750"
+            data-description="Opulant starry bangle"
+            data-image="golden starry bangle.jpg">Add to Cart</button>
+        </div>
+       
+        <div class="product" data-price="550" data-newest="6">
+            <img src="gold pandent.jpg" alt="Pendant">
+            <h3>Gold Pendant</h3>
+            <p>₹550</p>
+            <button class="add-to-cart"
+            data-name="Gold pandent"
+            data-price="550"
+            data-description="Chic golden pendent"
+            data-image="gold pandent.jpg">Add to Cart</button>
+        </div>
+        <div class="product" data-price="340" data-newest="5">
+            <img src="silver anklet.jpg" alt="Anklet">
+            <h3>Silver Anklet</h3>
+            <p>₹340</p>
+            <button class="add-to-cart"
+            data-name="Silver Anklet"
+            data-price="340"
+            data-description="Refined silver anklet"
+            data-image="silver anklet.jpg">Add to Cart</button>
+        </div>
+        <div class="product" data-price="250" data-newest="4">
+            <img src="gold ear rings.jpg" alt="Earrings">
+            <h3>Gold Earrings</h3>
+            <p>₹250</p>
+            <button class="add-to-cart"
+            data-name="Golden ear rings"
+            data-price="250"
+            data-description="Arstian golden ear rings"
+            data-image="gold ear rings.jpg">Add to Cart</button>
+        </div>
+        <div class="product" data-price="1349" data-newest="3">
+            <img src="toe ring.jpg" alt="asd">
+            <h3>Toe Ring</h3>
+            <p>₹1349</p>
+            <button class="add-to-cart"
+            data-name="Toe Ring"
+            data-price="1349"
+            data-description="Sliver toe ring"
+            data-image="toe ring.jpg">Add to Cart</button>
+        </div>
+        <div class="product" data-price="3500" data-newest="2">
+            <img src="gold coin.jpg" alt="safdg">
+            <h3>Gold Coin</h3>
+            <p>₹3500</p>
+            <button class="add-to-cart"
+            data-name="gold coin"
+            data-price="3500"
+            data-description="pure and blazing gold coin"
+            data-image="gold coin.jpg">Add to Cart</button>
+        </div>    
+        <div class="product" data-price="1200" data-newest="1">
+            <a href="nosepin.html">
+            <img src="GDLNP03_1.jpg" alt="Diamond Nose Pin">
+            </a>
+            <h3>Diamond Nose Pin</h3>
+            <p>₹1200</p>
+            
+            <button class="add-to-cart"
+            data-name="Diamond Nose Ring"
+            data-price="1200"
+            data-description="Unique Diamond nose ring"
+            data-image="GDLNP03_1.jpg">Add to Cart</button>
+        </div>
+    </section>
+</section>
+    <div id="login-popup">
+        <div class="login-content">
+            <span class="close-btn">&times;</span>
+            <img src="diva logo.png" alt="Diva Logo">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter username">
+
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter password">
+
+                <button onclick="login()" id="login-btn">Login</button>
+
+                <p id="login-error">Invalid username or password</p>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Diva Jewels. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

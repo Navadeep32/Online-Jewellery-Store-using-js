@@ -1,0 +1,154 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #ffffff; /* Text color */
+    min-height: 100vh; /* Ensures the footer sticks to the bottom */
+    display: flex;
+    flex-direction: column; /* Allows the footer to be pushed down */
+}
+
+/* Header */
+header {
+    background-color: #000000;
+    color: #fff;
+    padding: 0 20px; /* Side padding for a cleaner look */
+    height: 120px; /* Adjusted navbar height */
+    display: flex;
+    align-items: center; /* Vertically centers content */
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.436); /* White shadow below navbar */
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end; /* Aligns menu items to the right */
+    width: 100%;
+    position: relative;
+    top: -5px; /* Move the menu items slightly upwards */
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* Ensure horizontal layout */
+    gap: 20px; /* Space between menu items */
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px; /* Adjusted font size for readability */
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ccc; /* Change color on hover */
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto; /* Ensures the footer stays at the bottom */
+    width: 100%; /* Make sure it spans the full width of the page */
+}
+
+/* Cart Styles */
+.cart {
+    padding: 20px;
+    max-width: 100%; /* Max width for the cart section */
+    margin: auto; /* Center the cart section */
+}
+
+.cart h2 {
+    margin-bottom: 20px;
+    text-align: center; /* Center the heading */
+}
+
+.cart-item {
+    border: 1px solid #020202;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between; /* Aligns items in a row with space between */
+    align-items: center;
+    background-color: #000000; /* Background for cart items */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    width: 550px;
+}
+
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+.cart-item div {
+    flex-grow: 1; /* Allows the description div to take up available space */
+}
+.cart-item-details div {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-item-details h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.cart-item-details p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.remove-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px; /* Space between description and button */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.remove-btn:hover {
+    background-color: #c82333; /* Darken on hover */
+}
+
+#checkout-btn {
+    display: block; /* Center the button */
+    margin: 20px auto; /* Center with margin */
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+#checkout-btn:hover {
+    background-color: #218838; /* Darken on hover */
+}
+.cart-total {
+    border-top: 1px solid #ddd; /* Adds a border above the total */
+    margin-top: 20px; /* Space above the total */
+    padding-top: 10px; /* Space within the total container */
+    text-align: right; /* Align total to the right */
+    font-size: 18px; /* Slightly larger font for visibility */
+    color: #ffffff; /* Darker color for contrast */
+    font-weight: bold; /* Bold text for emphasis */
+}

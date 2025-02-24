@@ -1,0 +1,106 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #050505;
+}
+
+header {
+    background-color: #0a0a0a;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(245, 244, 244, 0.56);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.product-details-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px 100px;
+    margin-top: 50px;
+}
+
+.slideshow {
+    width: 30%; /* Reduced the width to make the images smaller */
+}
+
+.slideshow-image {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.slideshow-image.active {
+    display: block;
+}
+
+/* Professional, Clean Product Details */
+.product-details {
+    width: 60%; /* Adjusted the width to give more space for details */
+    margin-left: 50px;
+}
+
+.product-details h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #f3f1f1;
+    font-weight: 600;
+}
+
+.product-details p {
+    font-size: 18px;
+    color: #fbf8f8;
+    margin: 8px 0;
+}
+
+.product-details p strong {
+    color: #f8f6f6;
+    font-weight: 500;
+}
+
+/* Buttons */
+button {
+    background-color: #333;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #248000;
+}
+
+/* Footer */
+footer {
+    background-color: #090909;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    height: 20px;
+    bottom: 0;
+}
